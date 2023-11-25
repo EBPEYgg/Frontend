@@ -1,5 +1,6 @@
 import gulp from "gulp";
 import del from "del";
+
 import include from "gulp-file-include";
 import formatHtml from "gulp-format-html";
 
@@ -10,6 +11,7 @@ import autoprefixer from "autoprefixer";
 import sortMediaQueries from "postcss-sort-media-queries";
 import minify from "gulp-csso";
 import rename from "gulp-rename";
+
 import terser from "gulp-terser";
 
 import imagemin from "gulp-imagemin";
@@ -40,13 +42,14 @@ const resources = {
   ]
 };
 
+// Gulp Tasks:
 function clean() {
   return del("dist");
 }
 
 function includeHtml() {
   return gulp
-    .src("src/html/*.html")
+    .src("src/html/**/*.html")
     .pipe(plumber())
     .pipe(
       include({
