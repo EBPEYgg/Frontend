@@ -1,8 +1,16 @@
 .listing
 {
+  .container;
+  margin-bottom: 100px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 120px 60px;
+  flex-direction: column;
+
+  &__events-list
+  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px 60px;
+  }
 
   &__event-card
   {
