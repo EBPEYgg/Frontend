@@ -8,22 +8,25 @@
   &__input
   {
     .is-hidden;
+
     &:checked
     {
       &~.check__mark
       {
         background-color: @black;
+
         &::after
         {
           content: '';
           display: block;
           position: absolute;
-
+          top: 5px;
+          left: 9px;
           width: 6px;
           height: 12px;
           box-sizing: border-box;
           border-bottom: 2px solid @white;
-          border-radius: 2px solid @white;
+          border-right: 2px solid @white;
           transform: rotate(45deg);
         }
       }
@@ -47,6 +50,4 @@
     font-size: 14px;
     color: @black;
   }
-
-
 }
