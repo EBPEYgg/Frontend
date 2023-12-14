@@ -17,13 +17,10 @@
     color: @black;
   }
 
-  &__button1
+  &__button
   {
-    margin-left: 648px;
     display: inline-block;
-    max-width: 272px;
     width: auto;
-    padding: 15px 35px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -33,39 +30,35 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    background-color: @red;
-    color: @white;
-    transition: background-color 0.2s;
 
-    &:active
+    &--1
     {
-      background-color: @red_dark;
-    }
-  
-    &:hover
-    {
-        @media (hover: hover) {
-            background-color: @red_dark;
-        }
-    }
-  }
+      margin-left: 648px;
+      max-width: 272px;
+      padding: 15px 35px;
+      background-color: @red;
+      color: @white;
+      transition: background-color 0.2s;
 
-  &__button2
-  {
-    margin-left: 110px;
-    display: inline-block;
-    max-width: 240px;
-    width: auto;
-    padding: 15px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-    font-family: Open Sans;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    color: @black;
+      &:active
+      {
+        background-color: @red_dark;
+      }
+    
+      &:hover
+      {
+          @media (hover: hover) {
+              background-color: @red_dark;
+          }
+      }
+    }
+
+    &--2
+    {
+      margin-left: 110px;
+      max-width: 250px;
+      padding: 15px 40px;
+      color: @black;
+    }
   }
 }
