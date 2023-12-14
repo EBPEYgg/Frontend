@@ -72,9 +72,26 @@
       background-color: transparent;
       padding: 15px 40px;
       border: 1px solid @black;
+      border-radius: 40px;
       font-size: 16px;
       line-height: normal;
       font-weight: 600;
       color: @black;
+      transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+      &:active
+      {
+        background-color: @black;
+        color: @white;
+      }
+    
+      &:hover
+      {
+        @media (hover: hover)
+        {
+          background-color: @black;
+          color: @white;
+        }
+      }
   }
 }
