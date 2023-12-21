@@ -1,5 +1,6 @@
 .pp
 {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +10,6 @@
   padding: 90px 50px 50px;
   overflow-y: auto;
   z-index: 110;
-  display: none;
   background-color: @gray;
   @supports (backdrop-filter: blur(25px))
   {
@@ -20,6 +20,7 @@
   &__container
   {
     box-sizing: border-box;
+    display: flex;
     flex-direction: column;
     max-width: 1210px;
     width: 100%;
