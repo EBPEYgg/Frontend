@@ -10,7 +10,6 @@
   padding: 90px 50px 50px;
   overflow-y: auto;
   z-index: 110;
-  background-color: @gray;
   @supports (backdrop-filter: blur(25px))
   {
     background-color: @black_40;
@@ -26,7 +25,7 @@
     width: 100%;
     margin: auto;
     padding: 70px 40px 40px;
-    background-color: @gray;
+    background-color: rgba(222, 222, 222);
     background-image: url("src/assets/images/noise.png");
     background-repeat: repeat;
     background-position: 0 0;
@@ -36,6 +35,7 @@
   &__title
   {
     margin: -110px 0 0;
+    margin-bottom: 50px;
     box-sizing: border-box;
     padding: 10px 84px;
     max-width: 595px;
@@ -79,10 +79,5 @@
         background-color: @red_dark;
       }
     }
-  }
-
-  &__form
-  {
-    
   }
 }

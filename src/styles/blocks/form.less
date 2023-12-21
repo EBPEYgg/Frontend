@@ -35,8 +35,26 @@
 
   &__btn
   {
+    margin-left: 110px;
     max-width: 400px;
     width: 100%;
+    border: 1px solid @black;
+    background-color: transparent;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover
+    {
+      @media (hover:hover)
+      {
+        color: @white;
+        background-color: @black;
+      }
+
+      &:active
+      {
+        color: @white;
+        background-color: @black;
+      }
+    }
   }
 
   &__check
