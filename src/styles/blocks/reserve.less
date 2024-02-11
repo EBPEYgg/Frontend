@@ -8,12 +8,38 @@
 		"order legend";
   width: 100%;
 
+  @media @bw1340
+  {
+    gap: 65px 6.5%;
+    grid-template-columns: 340px calc(93.5% - 340px);
+  }
+
+  @media @bw1020
+  {
+    gap: 60px;
+    grid-template-columns: auto 390px;
+    grid-template-areas:
+        "scheme scheme"
+        "checks legend"
+        "checks order";
+  }
+
+  @media @bw768
+  {
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "scheme"
+        "legend"
+        "checks"
+        "order";
+  }
+
   &__checks
   {
     grid-area: checks;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
   }
 
   &__order
@@ -56,6 +82,8 @@
 
   &__check
   {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
 
     &:last-child
@@ -111,48 +139,60 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 18px;
+
+    &:last-child
+    {
+      margin-bottom: 26px;
+    }
   }
 
   &__qty
   {
-        &::after
-        {
-          content: " " attr(data-caption) " | " attr(data-price);
-        }
+    &::after
+    {
+      content: " " attr(data-caption) " | " attr(data-price);
+    }
   }
 
-    &__sum
+  &__sum
+  {
+    &::after
     {
-        &::after
-        {
-          content: attr(data-currency);
-          margin-left: 4px;
-          font-size: 0.95em;
-        }
+      content: attr(data-currency);
+      margin-left: 4px;
+      font-size: 0.95em;
     }
+  }
 
-    &__total
+  &__total
+  {
+    &::before
     {
-        &::before
-        {
-          content: attr(data-caption);
-          margin-right: 30px;
-        }
-        &::after
-        {
-          content: attr(data-currency);
-          margin-left: 4px;
-          font-size: 0.95em;
-        }
+      content: attr(data-caption);
+      margin-right: 30px;
     }
+    &::after
+    {
+      content: attr(data-currency);
+      margin-left: 4px;
+      font-size: 0.95em;
+    }
+  }
 
-    &__price
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin: 0 0 35px;
-    }
+  &__submit
+  {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  &__price
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 0 35px;
+  }
 
   &__price-item
   {

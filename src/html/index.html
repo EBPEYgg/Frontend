@@ -12,11 +12,11 @@
         <header class="main-header home__main-header">
           <h1 class="main-header__title">Арт — пространство</h1>
 
-          <picture class="main-header__picture">
+          <div class="main-header__picture">
             <svg class="main-header__img" width="202" height="147">
               <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
             </svg>
-          </picture>
+          </div>
           
           <p class="main-header__text">
             Для людей, горящих сердцем и делом 
@@ -24,19 +24,9 @@
           </p>
         </header>
         
-        <section class="offers home__offers">
-          <p class="offers__text">
-            Я хочу:
-          </p>
-          <a href="#event-pp" class="button offers__button--1">
-            Провести мероприятие
-          </a>
-          <a href="#event-pp" class="button offers__button--2">
-            Стать арендатором
-          </a>
-        </section>
+        @@include('blocks/offers.html', { class: 'home__offers' })
         @@include('blocks/about.html', { class: 'home__about' })
-        <section class="upcoming home__upcoming"></section>
+        @@include('blocks/upcoming.html', { class: 'home__upcoming' })
         @@include('blocks/blog-listing.html', { class: 'home__blog-listing' })
         @@include('blocks/contacts.html', { class: 'home__contacts' })
 
