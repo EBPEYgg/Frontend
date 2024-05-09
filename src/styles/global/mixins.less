@@ -48,6 +48,18 @@
   pointer-events: none !important;
 }
 
+.sticky
+{
+  position: -webkit-sticky;
+  position: sticky;
+  &::before,
+  &::after
+  {
+    content: '';
+    display: table;
+  }
+}
+
 .display-none
 {
   display: none;
