@@ -3,7 +3,7 @@
   box-sizing: border-box;
   padding: 60px 0 75px;
 
-  @media @bw370
+  @media @bw700
   {
     padding: 60px 0 30px;
   }
@@ -115,6 +115,11 @@
     {
       display: inline-block;
     }
+
+    @media @bw768
+    {
+      margin-top: 100px;
+    }
   }
 
   &__links
@@ -124,6 +129,11 @@
     column-gap: 44px;
     justify-content: center;
     margin-top: 50px;
+
+    @media @bw768
+    {
+      margin-top: -150px;
+    }
   }
 
   &__link
@@ -157,6 +167,11 @@
     flex-direction: row;
     grid-auto-columns: 263px 61px;
     column-gap: 60px;
+
+    @media @bw370
+    {
+      grid-auto-columns: auto;
+    }
   }
 
   &__confidency
@@ -188,6 +203,11 @@
     justify-content: flex-end;
     column-gap: 7.5px;
     margin-top: 50px;
+
+    @media @bw370
+    {
+      margin-top: 0px;
+    }
   }
 
   &__signature-text

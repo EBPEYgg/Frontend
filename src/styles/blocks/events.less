@@ -86,6 +86,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+
+    @media @bw500
+    {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media @bw768
+    {
+      margin-bottom: 50px;
+    }
   }
 
   &__info-item
@@ -94,6 +104,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
+    @media @bw500
+    {
+      margin-bottom: 50px;
+    }
   }
 
   &__info-picture
